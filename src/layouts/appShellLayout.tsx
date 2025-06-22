@@ -1,12 +1,17 @@
 "use client";
 
-import { AppShell, Burger } from '@mantine/core';
+import { AppShell, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
+import { ReactNode } from "react";
 
-export default function AppShellLayout({ data }: { data: any }) {
+export default function AppShellLayout({
+  data,
+  children,
+}: {
+  data: any;
+  children?: ReactNode;
+}) {
   const [opened, { toggle }] = useDisclosure();
-
-  console.log('datadatadata', data)
 
   return (
     <AppShell
@@ -26,9 +31,8 @@ export default function AppShellLayout({ data }: { data: any }) {
       <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
 
       <AppShell.Main>
-        <h1>Server Data</h1>
-        {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-        <div>{data}dasnhjkjlashkjdlhasklj</div>
+        <h1>{data}</h1>
+        {children ?? 'empty no children'}
       </AppShell.Main>
     </AppShell>
   );

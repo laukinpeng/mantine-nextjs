@@ -1,4 +1,5 @@
 import AppShellLayout from "#/layouts/appShellLayout"
+import SampleTable from "#/components/table";
 
 export default function HomePage() {
 
@@ -6,5 +7,7 @@ export default function HomePage() {
   let data = 'test1'
 
   return (
-    <AppShellLayout data={data}/>
-  );}
+    <AppShellLayout data={data}>
+      <SampleTable />
+    </AppShellLayout>
+  )}

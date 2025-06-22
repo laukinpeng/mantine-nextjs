@@ -6,5 +6,7 @@ export default function HomePage() {
   let data = 'test'
 
   return (
-    <AppShellLayout data={data}/>
-  );}
+    <AppShellLayout data={data}>
+      
+    </AppShellLayout>
+  )}
